@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formacao Dev &mdash; Zero ao Flutter</title>
+    <meta name="description" content="Formacao completa do zero absoluto ao Flutter profissional, com grade detalhada, projetos reais e capstone final.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Pular para o conteudo</a>
+
+    <svg class="visually-hidden" aria-hidden="true">
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24">
+        <path d="M21 12.5A9 9 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </symbol>
+      <symbol id="icon-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle>
+        <path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </symbol>
+      <symbol id="icon-document" viewBox="0 0 24 24">
+        <path d="M7 3h7l5 5v13H7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+        <path d="M14 3v5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+        <path d="M9 14l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </symbol>
+      <symbol id="icon-stack" viewBox="0 0 24 24">
+        <path d="M12 4l8 4-8 4-8-4 8-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+        <path d="M4 12l8 4 8-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+        <path d="M4 16l8 4 8-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+      </symbol>
+      <symbol id="icon-database" viewBox="0 0 24 24">
+        <ellipse cx="12" cy="5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"></ellipse>
+        <path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5" fill="none" stroke="currentColor" stroke-width="2"></path>
+        <path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" fill="none" stroke="currentColor" stroke-width="2"></path>
+      </symbol>
+      <symbol id="icon-nodes" viewBox="0 0 24 24">
+        <circle cx="6" cy="7" r="2.5" fill="none" stroke="currentColor" stroke-width="2"></circle>
+        <circle cx="18" cy="7" r="2.5" fill="none" stroke="currentColor" stroke-width="2"></circle>
+        <circle cx="12" cy="17" r="2.5" fill="none" stroke="currentColor" stroke-width="2"></circle>
+        <path d="M8.4 8.4l3.2 6.2M15.6 8.4l-3.2 6.2M8.6 7h6.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </symbol>
+      <symbol id="icon-cloud" viewBox="0 0 24 24">
+        <path d="M5 17a4 4 0 0 1 1-7.8A5.5 5.5 0 0 1 16.5 7a4 4 0 0 1 .5 8H5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+      </symbol>
+      <symbol id="icon-mobile" viewBox="0 0 24 24">
+        <rect x="7" y="2.5" width="10" height="19" rx="2" fill="none" stroke="currentColor" stroke-width="2"></rect>
+        <circle cx="12" cy="18" r="1" fill="none" stroke="currentColor" stroke-width="2"></circle>
+      </symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24">
+        <path d="M8 9l-4 3 4 3M16 9l4 3-4 3M10 7l4 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </symbol>
+      <symbol id="icon-branch" viewBox="0 0 24 24">
+        <circle cx="6" cy="5" r="2" fill="none" stroke="currentColor" stroke-width="2"></circle>
+        <circle cx="6" cy="19" r="2" fill="none" stroke="currentColor" stroke-width="2"></circle>
+        <circle cx="18" cy="9" r="2" fill="none" stroke="currentColor" stroke-width="2"></circle>
+        <path d="M6 7v10a4 4 0 0 0 4 4h2M8 5h6a4 4 0 0 1 4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </symbol>
+      <symbol id="icon-box" viewBox="0 0 24 24">
+        <rect x="3" y="7" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"></rect>
+        <path d="M7 7V4h4v3M13 7V4h4v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+      </symbol>
+      <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+        <path d="M12 5l-6 6M12 5l6 6M12 5v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </symbol>
+    </svg>
+
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <div class="logo">Forma&ccedil;&atilde;o Dev &mdash; Zero ao Flutter</div>
+        <nav class="nav" aria-label="Primaria">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+            <span>Menu</span>
+            <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
+          </button>
+          <ul class="nav-list" id="primary-nav">
+            <li><a href="#visao-geral">Vis&atilde;o Geral</a></li>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#grade">Grade</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#metodologia">Metodologia</a></li>
+            <li><a href="#capstone">Capstone Flutter</a></li>
+            <li><a href="#valores">Investimento</a></li>
+            <li><a href="#ingles">Ingl&ecirc;s Opcional</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#inscricao">Inscri&ccedil;&atilde;o</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-ghost btn-small" href="#grade">Ver a grade</a>
+          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Alternar tema">
+            <span class="theme-toggle-text">Tema escuro</span>
+            <span class="theme-toggle-icons" aria-hidden="true">
+              <svg class="icon icon-moon"><use href="#icon-moon"></use></svg>
+              <svg class="icon icon-sun"><use href="#icon-sun"></use></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-content reveal" style="--delay: 0.05s;">
+            <p class="eyebrow">Forma&ccedil;&atilde;o completa e progressiva</p>
+            <h1 id="hero-title">Forma&ccedil;&atilde;o em Programa&ccedil;&atilde;o: do Zero Absoluto ao Flutter Profissional</h1>
+            <p class="lead">Uma forma&ccedil;&atilde;o completa e progressiva para formar programadores de verdade &mdash; come&ccedil;ando com l&oacute;gica e an&aacute;lise de sistemas, evoluindo por backend, bancos de dados, web, deploy e finalizando com Flutter avan&ccedil;ado e um app de alto n&iacute;vel.</p>
+            <div class="badge-row">
+              <span class="badge">2 aulas por semana</span>
+              <span class="badge">1h30 por aula</span>
+              <span class="badge">Progress&atilde;o ultra-gradativa</span>
+              <span class="badge">Projetos guiados + desafios</span>
+            </div>
+            <ul class="hero-list">
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+                <span>Voc&ecirc; aprende a pensar como programador: l&oacute;gica, algoritmos e modelagem antes do c&oacute;digo.</span>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+                <span>Constr&oacute;i projetos em cada etapa &mdash; do primeiro &ldquo;Hello World&rdquo; at&eacute; CRUDs completos, APIs e deploy.</span>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+                <span>Portf&oacute;lio real: v&aacute;rios sistemas + m&uacute;ltiplos apps Flutter + capstone final integrado.</span>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+                <span>Conte&uacute;do organizado para reduzir a curva de aprendizado e evitar lacunas.</span>
+              </li>
+            </ul>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#grade">Quero ver a grade completa</a>
+              <a class="btn btn-outline" href="#projetos">Ver os projetos da forma&ccedil;&atilde;o</a>
+            </div>
+            <p class="fine-print">Sem promessas m&aacute;gicas: voc&ecirc; evolui com pr&aacute;tica cont&iacute;nua e orienta&ccedil;&atilde;o clara. A forma&ccedil;&atilde;o &eacute; desenhada para iniciantes, mas exige dedica&ccedil;&atilde;o.</p>
+          </div>
+          <div class="hero-aside reveal" style="--delay: 0.15s;">
+            <div class="hero-panel">
+              <div class="hero-panel-header">
+                <p class="panel-title">Formato da forma&ccedil;&atilde;o</p>
+                <span class="panel-tag">Trilha completa</span>
+              </div>
+              <ul class="panel-list">
+                <li>72 semanas &bull; 144 aulas</li>
+                <li>Duas trilhas nas fases iniciais</li>
+                <li>Do papel ao deploy, com pr&aacute;tica guiada</li>
+                <li>Capstone Flutter de alto n&iacute;vel</li>
+              </ul>
+              <p class="format-badge">2 aulas/semana &bull; 1h30 por aula &bull; Progress&atilde;o do zero ao avan&ccedil;ado</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="visao-geral" class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Vis&atilde;o Geral</p>
+            <h2>O que voc&ecirc; ser&aacute; capaz de fazer ao final</h2>
+          </div>
+          <div class="card-grid">
+            <article class="card outcome-card reveal" style="--delay: 0.05s;">
+              <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#icon-document"></use></svg></div>
+              <h3>Analisar e especificar sistemas</h3>
+              <p>Levantar requisitos, definir regras e exce&ccedil;&otilde;es, criar crit&eacute;rios test&aacute;veis e desenhar fluxos.</p>
+            </article>
+            <article class="card outcome-card reveal" style="--delay: 0.1s;">
+              <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#icon-stack"></use></svg></div>
+              <h3>Construir softwares completos</h3>
+              <p>Do terminal ao web e mobile: front-end, back-end, banco de dados e integra&ccedil;&otilde;es.</p>
+            </article>
+            <article class="card outcome-card reveal" style="--delay: 0.15s;">
+              <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#icon-database"></use></svg></div>
+              <h3>Modelar e consultar bancos de dados</h3>
+              <p>DER, cardinalidade, PK/FK, JOINs, relat&oacute;rios &mdash; e modelagem NoSQL com MongoDB.</p>
+            </article>
+            <article class="card outcome-card reveal" style="--delay: 0.2s;">
+              <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#icon-nodes"></use></svg></div>
+              <h3>Aplicar engenharia de software</h3>
+              <p>Camadas, abstra&ccedil;&atilde;o, orienta&ccedil;&atilde;o a objetos, valida&ccedil;&atilde;o, organiza&ccedil;&atilde;o e boas pr&aacute;ticas.</p>
+            </article>
+            <article class="card outcome-card reveal" style="--delay: 0.25s;">
+              <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#icon-cloud"></use></svg></div>
+              <h3>Publicar e colocar no ar</h3>
+              <p>Docker, vari&aacute;veis de ambiente e deploy com processo claro e reprodut&iacute;vel.</p>
+            </article>
+            <article class="card outcome-card reveal" style="--delay: 0.3s;">
+              <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#icon-mobile"></use></svg></div>
+              <h3>Criar apps Flutter profissionais</h3>
+              <p>Apps progressivos at&eacute; um capstone avan&ccedil;ado com API, autentica&ccedil;&atilde;o, estado e qualidade.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="como-funciona" class="section section-alt">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Como Funciona</p>
+            <h2>Como as aulas funcionam (1h30, 2x por semana)</h2>
+          </div>
+          <div class="two-column">
+            <div class="card reveal">
+              <h3>Estrutura fixa da aula</h3>
+              <ol class="timeline">
+                <li class="timeline-item">
+                  <span class="timeline-time">10 min</span>
+                  <span class="timeline-text">Check-in (recupera&ccedil;&atilde;o): 3 perguntas r&aacute;pidas para fixar o conte&uacute;do anterior</span>
+                </li>
+                <li class="timeline-item">
+                  <span class="timeline-time">15 min</span>
+                  <span class="timeline-text">Conceito (1 ideia por vez)</span>
+                </li>
+                <li class="timeline-item">
+                  <span class="timeline-time">15 min</span>
+                  <span class="timeline-text">Exemplo resolvido (o professor &ldquo;pensa alto&rdquo; e mostra o caminho)</span>
+                </li>
+                <li class="timeline-item">
+                  <span class="timeline-time">35 min</span>
+                  <span class="timeline-text">Lab guiado (projeto do dia)</span>
+                </li>
+                <li class="timeline-item">
+                  <span class="timeline-time">10 min</span>
+                  <span class="timeline-text">Desafio individual (varia&ccedil;&atilde;o do que foi feito)</span>
+                </li>
+                <li class="timeline-item">
+                  <span class="timeline-time">5 min</span>
+                  <span class="timeline-text">Checklist + tarefa</span>
+                </li>
+              </ol>
+            </div>
+            <div class="card reveal">
+              <p class="lead">Voc&ecirc; aprende com exemplos bem constru&iacute;dos e pratica imediatamente. A cada semana, o conte&uacute;do volta de forma espa&ccedil;ada para consolidar mem&oacute;ria e reduzir esquecimento.</p>
+              <h3>Avalia&ccedil;&atilde;o e evolu&ccedil;&atilde;o</h3>
+              <ul class="list">
+                <li>Pontua&ccedil;&atilde;o por aula (10 pontos): check-in + lab + desafio</li>
+                <li>Projetos por m&oacute;dulo: microprojetos + projeto final</li>
+                <li>Rubricas objetivas: funcionalidade, valida&ccedil;&atilde;o, organiza&ccedil;&atilde;o, clareza e entrega</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="metodologia" class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Metodologia</p>
+            <h2>Metodologia clara, com pr&aacute;tica e revis&atilde;o inteligente</h2>
+          </div>
+          <div class="two-column align-center">
+            <div class="reveal">
+              <p class="lead">A forma&ccedil;&atilde;o combina explica&ccedil;&otilde;es curtas, aplica&ccedil;&atilde;o imediata e revis&atilde;o espa&ccedil;ada. O objetivo &eacute; consolidar racioc&iacute;nio l&oacute;gico antes de escalar a complexidade.</p>
+              <ul class="list">
+                <li>1 ideia por vez, com exemplo guiado e lab do dia</li>
+                <li>Feedback r&aacute;pido com desafios e checklist</li>
+                <li>Revis&atilde;o semanal para reduzir lacunas</li>
+              </ul>
+            </div>
+            <div class="diagram-card reveal" style="--delay: 0.1s;">
+              <h3>Fluxograma b&aacute;sico (decis&atilde;o e repeti&ccedil;&atilde;o)</h3>
+              <svg class="diagram" viewBox="0 0 520 220" role="img" aria-label="Fluxograma basico com decisao e repeticao">
+                <defs>
+                  <marker id="arrow-flow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+                    <path d="M0,0 L6,3 L0,6" fill="currentColor"></path>
+                  </marker>
+                </defs>
+                <rect x="200" y="10" width="120" height="40" rx="10" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                <text x="260" y="36" text-anchor="middle">Inicio</text>
+                <rect x="200" y="70" width="120" height="48" rx="12" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                <text x="260" y="98" text-anchor="middle">Processo</text>
+                <path d="M260 118v20" stroke="currentColor" stroke-width="2" marker-end="url(#arrow-flow)"></path>
+                <polygon points="260,150 320,180 260,210 200,180" fill="none" stroke="currentColor" stroke-width="2"></polygon>
+                <text x="260" y="184" text-anchor="middle">Decisao</text>
+                <path d="M200 180H110V90H200" stroke="currentColor" stroke-width="2" marker-end="url(#arrow-flow)" fill="none"></path>
+                <text x="120" y="84">Repetir</text>
+                <path d="M320 180H410V190" stroke="currentColor" stroke-width="2" marker-end="url(#arrow-flow)" fill="none"></path>
+                <rect x="370" y="190" width="120" height="24" rx="10" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                <text x="430" y="207" text-anchor="middle">Fim</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="grade" class="section section-alt">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Grade Completa</p>
+            <h2>Grade da forma&ccedil;&atilde;o (organizada para uma curva de aprendizado leve)</h2>
+            <p class="lead">S&atilde;o 72 semanas (144 aulas), com duas trilhas em paralelo nas fases iniciais &mdash; uma aula para o tema principal e outra para o tema complementar &mdash; at&eacute; o m&oacute;dulo final de Flutter avan&ccedil;ado.</p>
+          </div>
+
+          <div class="summary-grid">
+            <div class="summary-card reveal" style="--delay: 0.05s;">
+              <h3>72 semanas / 144 aulas</h3>
+              <p>Ritmo est&aacute;vel para construir base s&oacute;lida sem pressa.</p>
+            </div>
+            <div class="summary-card reveal" style="--delay: 0.1s;">
+              <h3>16+ projetos no portf&oacute;lio</h3>
+              <p>Da teoria ao sistema completo, em etapas guiadas.</p>
+            </div>
+            <div class="summary-card reveal" style="--delay: 0.15s;">
+              <h3>Do papel ao deploy</h3>
+              <p>Requisitos, banco, API, front e publica&ccedil;&atilde;o.</p>
+            </div>
+            <div class="summary-card reveal" style="--delay: 0.2s;">
+              <h3>Capstone Flutter profissional</h3>
+              <p>Entrega final de alto n&iacute;vel, com padr&atilde;o real.</p>
+            </div>
+          </div>
+
+          <div class="roadmap reveal">
+            <h3>Timeline por fases (72 semanas / 144 aulas)</h3>
+            <ol class="phase-roadmap">
+              <li><span class="phase-dot"></span><strong>Fase 1</strong><span>Semanas 1&ndash;6</span></li>
+              <li><span class="phase-dot"></span><strong>Fase 2</strong><span>Semanas 7&ndash;12</span></li>
+              <li><span class="phase-dot"></span><strong>Fase 3</strong><span>Semanas 13&ndash;18</span></li>
+              <li><span class="phase-dot"></span><strong>Fase 4</strong><span>Semanas 19&ndash;24</span></li>
+              <li><span class="phase-dot"></span><strong>Fase 5</strong><span>Semanas 25&ndash;30</span></li>
+              <li><span class="phase-dot"></span><strong>Fase 6</strong><span>Semanas 31&ndash;36</span></li>
+              <li><span class="phase-dot"></span><strong>Fase 7</strong><span>Semanas 37&ndash;42</span></li>
+              <li><span class="phase-dot"></span><strong>Fase 8</strong><span>Semanas 43&ndash;48</span></li>
+              <li><span class="phase-dot"></span><strong>Fase 9</strong><span>Semanas 49&ndash;54</span></li>
+              <li><span class="phase-dot"></span><strong>Fase 10</strong><span>Semanas 55&ndash;72</span></li>
+            </ol>
+          </div>
+
+          <div class="accordion" data-accordion>
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="fase-1" id="fase-1-trigger">
+                  <span>FASE 1 &mdash; Semanas 1&ndash;6 (Aulas 1&ndash;12)</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="fase-1" role="region" aria-labelledby="fase-1-trigger" hidden>
+                <p><strong>Duracao:</strong> Semanas 1&ndash;6 (Aulas 1&ndash;12)</p>
+                <p><strong>Aula 1:</strong> L&oacute;gica &amp; Algoritmos (pseudoc&oacute;digo, decis&otilde;es, repeti&ccedil;&atilde;o, fluxogramas)</p>
+                <p><strong>Aula 2:</strong> An&aacute;lise de Sistemas (requisitos, crit&eacute;rios, casos de uso, wireframes)</p>
+                <div class="phase-columns">
+                  <div>
+                    <h4>O que aprende</h4>
+                    <ul>
+                      <li>Estruturar racioc&iacute;nio com decis&otilde;es e repeti&ccedil;&atilde;o.</li>
+                      <li>Traduzir requisitos em casos de uso e wireframes.</li>
+                      <li>Definir regras e crit&eacute;rios de valida&ccedil;&atilde;o.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Entregas</h4>
+                    <ul>
+                      <li>OrderHub v0 no papel: EPS, fluxograma, pseudoc&oacute;digo do menu, requisitos RF/RNF, user stories, caso de uso com erros, wireframes e cen&aacute;rios de teste</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="fase-2" id="fase-2-trigger">
+                  <span>FASE 2 &mdash; Semanas 7&ndash;12 (Aulas 13&ndash;24)</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="fase-2" role="region" aria-labelledby="fase-2-trigger" hidden>
+                <p><strong>Duracao:</strong> Semanas 7&ndash;12 (Aulas 13&ndash;24)</p>
+                <p><strong>Aula 1:</strong> Python I (base s&oacute;lida e progressiva)</p>
+                <p><strong>Aula 2:</strong> Ferramentas do programador (terminal, Git, debug, organiza&ccedil;&atilde;o)</p>
+                <div class="phase-columns">
+                  <div>
+                    <h4>O que aprende</h4>
+                    <ul>
+                      <li>Sintaxe e estruturas fundamentais em Python.</li>
+                      <li>Uso de terminal, Git e boas pr&aacute;ticas de organiza&ccedil;&atilde;o.</li>
+                      <li>Primeiro CRUD em linha de comando com valida&ccedil;&atilde;o.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Entregas</h4>
+                    <ul>
+                      <li>OrderHub CLI v1 em Python: menu + CRUD simples + valida&ccedil;&otilde;es</li>
+                      <li>Reposit&oacute;rio Git com README e padr&atilde;o de commits</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="fase-3" id="fase-3-trigger">
+                  <span>FASE 3 &mdash; Semanas 13&ndash;18 (Aulas 25&ndash;36)</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="fase-3" role="region" aria-labelledby="fase-3-trigger" hidden>
+                <p><strong>Duracao:</strong> Semanas 13&ndash;18 (Aulas 25&ndash;36)</p>
+                <p><strong>Aula 1:</strong> Python II (dados, arquivos, relat&oacute;rios)</p>
+                <p><strong>Aula 2:</strong> Java I (OOP do zero: classes, objetos, encapsulamento)</p>
+                <div class="phase-columns">
+                  <div>
+                    <h4>O que aprende</h4>
+                    <ul>
+                      <li>Manipular arquivos, dados e relat&oacute;rios com Python.</li>
+                      <li>Conceitos de OOP em Java: classes, objetos e encapsulamento.</li>
+                      <li>Modelar dom&iacute;nios reais com objetos.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Entregas</h4>
+                    <ul>
+                      <li>Analisador de CSV + relat&oacute;rios (Python)</li>
+                      <li>Dom&iacute;nio OO do OrderHub (Java)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="fase-4" id="fase-4-trigger">
+                  <span>FASE 4 &mdash; Semanas 19&ndash;24 (Aulas 37&ndash;48)</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="fase-4" role="region" aria-labelledby="fase-4-trigger" hidden>
+                <p><strong>Duracao:</strong> Semanas 19&ndash;24 (Aulas 37&ndash;48)</p>
+                <p><strong>Aula 1:</strong> SQL (modelagem ER &rarr; SQL Postgres/MySQL &rarr; JOIN/GROUP BY)</p>
+                <p><strong>Aula 2:</strong> Engenharia de Software I (UML, camadas, organiza&ccedil;&atilde;o, testes b&aacute;sicos)</p>
+                <div class="phase-columns">
+                  <div>
+                    <h4>O que aprende</h4>
+                    <ul>
+                      <li>Modelar dados e escrever consultas SQL com JOINs e agrega&ccedil;&otilde;es.</li>
+                      <li>Organizar camadas e documentar arquitetura com UML.</li>
+                      <li>Criar testes b&aacute;sicos e validar regras.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Entregas</h4>
+                    <ul>
+                      <li>DER do OrderHub + cria&ccedil;&atilde;o de tabelas + consultas e relat&oacute;rios</li>
+                      <li>Documento de arquitetura v1 + testes do dom&iacute;nio</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="fase-5" id="fase-5-trigger">
+                  <span>FASE 5 &mdash; Semanas 25&ndash;30 (Aulas 49&ndash;60)</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="fase-5" role="region" aria-labelledby="fase-5-trigger" hidden>
+                <p><strong>Duracao:</strong> Semanas 25&ndash;30 (Aulas 49&ndash;60)</p>
+                <p><strong>Aula 1:</strong> HTML + CSS (estrutura &rarr; layout &rarr; responsivo &rarr; formul&aacute;rios)</p>
+                <p><strong>Aula 2:</strong> JavaScript I (base &rarr; DOM &rarr; eventos &rarr; valida&ccedil;&otilde;es &rarr; LocalStorage)</p>
+                <div class="phase-columns">
+                  <div>
+                    <h4>O que aprende</h4>
+                    <ul>
+                      <li>Estruturar p&aacute;ginas e construir layouts responsivos.</li>
+                      <li>Manipular DOM, eventos e valida&ccedil;&otilde;es em JavaScript.</li>
+                      <li>Persistir dados locais com LocalStorage.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Entregas</h4>
+                    <ul>
+                      <li>Site institucional (responsivo)</li>
+                      <li>Admin web (front-only) do OrderHub com lista/cadastro e persist&ecirc;ncia local</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="fase-6" id="fase-6-trigger">
+                  <span>FASE 6 &mdash; Semanas 31&ndash;36 (Aulas 61&ndash;72)</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="fase-6" role="region" aria-labelledby="fase-6-trigger" hidden>
+                <p><strong>Duracao:</strong> Semanas 31&ndash;36 (Aulas 61&ndash;72)</p>
+                <p><strong>Aula 1:</strong> JavaScript II (async/fetch/APIs)</p>
+                <p><strong>Aula 2:</strong> Node.js I (Express, REST, CRUD + SQL)</p>
+                <div class="phase-columns">
+                  <div>
+                    <h4>O que aprende</h4>
+                    <ul>
+                      <li>Consumir APIs com async/await e fetch.</li>
+                      <li>Criar API REST com Express e integra&ccedil;&atilde;o SQL.</li>
+                      <li>Tratar erros, loading e respostas.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Entregas</h4>
+                    <ul>
+                      <li>Front consumindo API (loading/erro + CRUD)</li>
+                      <li>API REST conectada ao banco (CRUD completo)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="fase-7" id="fase-7-trigger">
+                  <span>FASE 7 &mdash; Semanas 37&ndash;42 (Aulas 73&ndash;84)</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="fase-7" role="region" aria-labelledby="fase-7-trigger" hidden>
+                <p><strong>Duracao:</strong> Semanas 37&ndash;42 (Aulas 73&ndash;84)</p>
+                <p><strong>Aula 1:</strong> NoSQL (MongoDB: modelagem, queries, agrega&ccedil;&otilde;es, &iacute;ndices)</p>
+                <p><strong>Aula 2:</strong> Node.js II (auth/JWT, roles, seguran&ccedil;a e padr&otilde;es de erro)</p>
+                <div class="phase-columns">
+                  <div>
+                    <h4>O que aprende</h4>
+                    <ul>
+                      <li>Modelar dados em MongoDB e otimizar consultas.</li>
+                      <li>Implementar autentica&ccedil;&atilde;o JWT e controle de acesso.</li>
+                      <li>Padronizar erros e proteger rotas.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Entregas</h4>
+                    <ul>
+                      <li>MongoDB aplicado (ex.: logs/auditoria e cole&ccedil;&otilde;es documentais)</li>
+                      <li>API segura com autentica&ccedil;&atilde;o + autoriza&ccedil;&atilde;o</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="fase-8" id="fase-8-trigger">
+                  <span>FASE 8 &mdash; Semanas 43&ndash;48 (Aulas 85&ndash;96)</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="fase-8" role="region" aria-labelledby="fase-8-trigger" hidden>
+                <p><strong>Duracao:</strong> Semanas 43&ndash;48 (Aulas 85&ndash;96)</p>
+                <p><strong>Aula 1:</strong> PHP (CRUD, sess&otilde;es, MVC simples)</p>
+                <p><strong>Aula 2:</strong> Deploy/DevOps (Docker, env, pipeline simples, publica&ccedil;&atilde;o)</p>
+                <div class="phase-columns">
+                  <div>
+                    <h4>O que aprende</h4>
+                    <ul>
+                      <li>Construir CRUDs com PHP e MVC simples.</li>
+                      <li>Configurar ambientes e publicar com Docker.</li>
+                      <li>Documentar processos de deploy.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Entregas</h4>
+                    <ul>
+                      <li>Mini sistema PHP com CRUD</li>
+                      <li>Deploy com Docker + runbook (como rodar, logs, ambiente)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="fase-9" id="fase-9-trigger">
+                  <span>FASE 9 &mdash; Semanas 49&ndash;54 (Aulas 97&ndash;108)</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="fase-9" role="region" aria-labelledby="fase-9-trigger" hidden>
+                <p><strong>Duracao:</strong> Semanas 49&ndash;54 (Aulas 97&ndash;108)</p>
+                <p><strong>Aula 1:</strong> Dart (linguagem, OOP, async)</p>
+                <p><strong>Aula 2:</strong> Flutter Foundations (UI, navega&ccedil;&atilde;o, forms, estado, persist&ecirc;ncia local)</p>
+                <div class="phase-columns">
+                  <div>
+                    <h4>O que aprende</h4>
+                    <ul>
+                      <li>Sintaxe Dart, OOP e async.</li>
+                      <li>Criar UI em Flutter com formul&aacute;rios e estado.</li>
+                      <li>Persistir dados offline.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Entregas</h4>
+                    <ul>
+                      <li>Projetos pequenos em Dart</li>
+                      <li>CRUD offline em Flutter (base para o avan&ccedil;ado)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="fase-10" id="fase-10-trigger">
+                  <span>FASE 10 &mdash; Semanas 55&ndash;72 (Aulas 109&ndash;144)</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="fase-10" role="region" aria-labelledby="fase-10-trigger" hidden>
+                <p><strong>Duracao:</strong> Semanas 55&ndash;72 (Aulas 109&ndash;144)</p>
+                <p><strong>Aulas 1 e 2:</strong> Flutter Advanced + Capstone</p>
+                <div class="phase-columns">
+                  <div>
+                    <h4>O que aprende</h4>
+                    <ul>
+                      <li>Arquitetura Flutter avan&ccedil;ada e integra&ccedil;&atilde;o com API.</li>
+                      <li>Gest&atilde;o de estado, cache e offline.</li>
+                      <li>Qualidade final, refino de UX e prepara&ccedil;&atilde;o de capstone.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Entregas</h4>
+                    <ul>
+                      <li>S&eacute;rie de apps progressivos (6 apps) + Capstone final &ldquo;alto n&iacute;vel&rdquo;:</li>
+                      <li>App 1: UI Pro (cat&aacute;logo, tema, componentes)</li>
+                      <li>App 2: Estado (lista, filtros, organiza&ccedil;&atilde;o)</li>
+                      <li>App 3: Persist&ecirc;ncia robusta (offline)</li>
+                      <li>App 4: API + cache + erros (dashboard)</li>
+                      <li>App 5: Auth real (JWT + rotas protegidas)</li>
+                      <li>App 6: UX avan&ccedil;ada (anima&ccedil;&otilde;es, microintera&ccedil;&otilde;es)</li>
+                      <li>Capstone: App profissional integrado com API, autentica&ccedil;&atilde;o, CRUD completo, busca/filtros, offline/caching e qualidade</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="diagram-card der-card reveal" style="--delay: 0.1s;">
+            <div class="diagram-header">
+              <h3>DER simplificado (Cliente &mdash; Pedido &mdash; Item)</h3>
+              <p>Um exemplo direto de modelagem relacional que aparece na fase de banco.</p>
+            </div>
+            <svg class="diagram" viewBox="0 0 600 180" role="img" aria-label="DER simplificado com Cliente, Pedido e Item">
+              <defs>
+                <marker id="arrow-der" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L6,3 L0,6" fill="currentColor"></path>
+                </marker>
+              </defs>
+              <rect x="30" y="50" width="150" height="70" rx="10" fill="none" stroke="currentColor" stroke-width="2"></rect>
+              <text x="105" y="90" text-anchor="middle">Cliente</text>
+              <rect x="225" y="30" width="150" height="70" rx="10" fill="none" stroke="currentColor" stroke-width="2"></rect>
+              <text x="300" y="70" text-anchor="middle">Pedido</text>
+              <rect x="420" y="50" width="150" height="70" rx="10" fill="none" stroke="currentColor" stroke-width="2"></rect>
+              <text x="495" y="90" text-anchor="middle">Item</text>
+              <path d="M180 85h45" stroke="currentColor" stroke-width="2" marker-end="url(#arrow-der)"></path>
+              <path d="M375 65h45" stroke="currentColor" stroke-width="2" marker-end="url(#arrow-der)"></path>
+              <text x="190" y="70">1</text>
+              <text x="210" y="70">N</text>
+              <text x="385" y="50">1</text>
+              <text x="405" y="50">N</text>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section id="projetos" class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Projetos</p>
+            <h2>Projetos que voc&ecirc; vai construir (passo a passo, em evolu&ccedil;&atilde;o)</h2>
+            <p class="lead">Voc&ecirc; n&atilde;o s&oacute; assiste: voc&ecirc; constr&oacute;i. Cada projeto aumenta um pouco a complexidade para consolidar o conte&uacute;do.</p>
+          </div>
+          <div class="project-grid">
+            <article class="card project-card reveal" style="--delay: 0.05s;">
+              <span class="project-tag">PROJETO A</span>
+              <h3>OrderHub v0 (no papel)</h3>
+              <p>Requisitos, regras, fluxos, wireframes, pseudoc&oacute;digo e cen&aacute;rios de teste.</p>
+            </article>
+            <article class="card project-card reveal" style="--delay: 0.1s;">
+              <span class="project-tag">PROJETO B</span>
+              <h3>OrderHub CLI v1 (Python)</h3>
+              <p>Menu, cadastros e valida&ccedil;&otilde;es &mdash; o primeiro CRUD completo em terminal.</p>
+            </article>
+            <article class="card project-card reveal" style="--delay: 0.15s;">
+              <span class="project-tag">PROJETO C</span>
+              <h3>Dados + OO</h3>
+              <p>Analisador de CSV com relat&oacute;rios (Python) e dom&iacute;nio OO (Java).</p>
+            </article>
+            <article class="card project-card reveal" style="--delay: 0.2s;">
+              <span class="project-tag">PROJETO D</span>
+              <h3>Banco + Engenharia</h3>
+              <p>DER, SQL, JOINs e relat&oacute;rios + camadas, UML e testes b&aacute;sicos.</p>
+            </article>
+            <article class="card project-card reveal" style="--delay: 0.25s;">
+              <span class="project-tag">PROJETO E</span>
+              <h3>Admin Web (HTML/CSS/JS)</h3>
+              <p>Tela estruturada, responsiva e interativa (DOM, valida&ccedil;&atilde;o e LocalStorage).</p>
+            </article>
+            <article class="card project-card reveal" style="--delay: 0.3s;">
+              <span class="project-tag">PROJETO F</span>
+              <h3>Fullstack v1 (JS + Node + SQL)</h3>
+              <p>Front consumindo API com CRUD completo e tratamento de erros.</p>
+            </article>
+            <article class="card project-card reveal" style="--delay: 0.35s;">
+              <span class="project-tag">PROJETO G</span>
+              <h3>Seguran&ccedil;a + Mongo</h3>
+              <p>Login JWT, roles e auditoria/logs em MongoDB.</p>
+            </article>
+            <article class="card project-card reveal" style="--delay: 0.4s;">
+              <span class="project-tag">PROJETO H</span>
+              <h3>PHP + Deploy</h3>
+              <p>Sistema web em PHP + deploy com Docker e processo reprodut&iacute;vel.</p>
+            </article>
+            <article class="card project-card reveal" style="--delay: 0.45s;">
+              <span class="project-tag">PROJETO I</span>
+              <h3>Flutter CRUD Offline</h3>
+              <p>App Flutter com formul&aacute;rios, estado e persist&ecirc;ncia local.</p>
+            </article>
+            <article class="card project-card reveal" style="--delay: 0.5s;">
+              <span class="project-tag">S&Eacute;RIE FLUTTER ADVANCED</span>
+              <h3>6 apps progressivos</h3>
+              <p>Da UI profissional at&eacute; auth real e UX avan&ccedil;ada.</p>
+            </article>
+            <article class="card project-card reveal" style="--delay: 0.55s;">
+              <span class="project-tag">CAPSTONE FINAL</span>
+              <h3>OrderHub Mobile PRO</h3>
+              <p>App completo de alto n&iacute;vel com API, autentica&ccedil;&atilde;o, CRUD, busca/filtros, offline/caching e qualidade.</p>
+            </article>
+          </div>
+
+          <div class="project-timeline reveal">
+            <h3>Linha do tempo de evolu&ccedil;&atilde;o</h3>
+            <ol class="timeline-horizontal">
+              <li><span>Fundamentos</span><small>OrderHub v0</small></li>
+              <li><span>CLI</span><small>CRUD em Python</small></li>
+              <li><span>Dados</span><small>CSV + OO</small></li>
+              <li><span>Banco</span><small>SQL + UML</small></li>
+              <li><span>Web</span><small>Admin JS</small></li>
+              <li><span>API</span><small>Node + SQL</small></li>
+              <li><span>Seguran&ccedil;a</span><small>JWT + Mongo</small></li>
+              <li><span>Deploy</span><small>Docker</small></li>
+              <li><span>Flutter</span><small>Offline</small></li>
+              <li><span>Capstone</span><small>Mobile PRO</small></li>
+            </ol>
+          </div>
+
+          <div class="portfolio-card reveal" style="--delay: 0.1s;">
+            <h3>Portf&oacute;lio final</h3>
+            <p>Voc&ecirc; termina a forma&ccedil;&atilde;o com um portf&oacute;lio consistente: m&uacute;ltiplos sistemas, APIs, bancos, deploy e v&aacute;rios apps Flutter.</p>
+          </div>
+        </div>
+      </section>
+      <section id="tecnologias" class="section section-alt">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Tecnologias</p>
+            <h2>Tecnologias e ferramentas que voc&ecirc; vai dominar</h2>
+          </div>
+          <div class="tech-grid">
+            <div class="tech-chip reveal" style="--delay: 0.05s;"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg>Python</div>
+            <div class="tech-chip reveal" style="--delay: 0.08s;"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg>Java</div>
+            <div class="tech-chip reveal" style="--delay: 0.11s;"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg>HTML</div>
+            <div class="tech-chip reveal" style="--delay: 0.14s;"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg>CSS</div>
+            <div class="tech-chip reveal" style="--delay: 0.17s;"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg>JavaScript</div>
+            <div class="tech-chip reveal" style="--delay: 0.2s;"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg>Node.js</div>
+            <div class="tech-chip reveal" style="--delay: 0.23s;"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg>PHP</div>
+            <div class="tech-chip reveal" style="--delay: 0.26s;"><svg class="icon" aria-hidden="true"><use href="#icon-database"></use></svg>SQL (Postgres/MySQL)</div>
+            <div class="tech-chip reveal" style="--delay: 0.29s;"><svg class="icon" aria-hidden="true"><use href="#icon-database"></use></svg>MongoDB</div>
+            <div class="tech-chip reveal" style="--delay: 0.32s;"><svg class="icon" aria-hidden="true"><use href="#icon-branch"></use></svg>Git/GitHub</div>
+            <div class="tech-chip reveal" style="--delay: 0.35s;"><svg class="icon" aria-hidden="true"><use href="#icon-box"></use></svg>Docker</div>
+            <div class="tech-chip reveal" style="--delay: 0.38s;"><svg class="icon" aria-hidden="true"><use href="#icon-cloud"></use></svg>APIs REST</div>
+            <div class="tech-chip reveal" style="--delay: 0.41s;"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg>Dart</div>
+            <div class="tech-chip reveal" style="--delay: 0.44s;"><svg class="icon" aria-hidden="true"><use href="#icon-mobile"></use></svg>Flutter</div>
+          </div>
+          <p class="section-note">O foco n&atilde;o &eacute; decorar tecnologia &mdash; &eacute; aprender a construir software com l&oacute;gica, modelagem e boas pr&aacute;ticas.</p>
+        </div>
+      </section>
+      <section id="capstone" class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Capstone Flutter</p>
+            <h2>M&oacute;dulo Final: Flutter Avan&ccedil;ado + Capstone (app de alto n&iacute;vel)</h2>
+            <p class="lead">O fechamento da forma&ccedil;&atilde;o &eacute; um projeto completo, com padr&atilde;o profissional.</p>
+          </div>
+          <div class="two-column align-center">
+            <div class="card reveal">
+              <h3>Funcionalidades do capstone</h3>
+              <ul class="list check-list">
+                <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>Autentica&ccedil;&atilde;o real (JWT) + rotas protegidas</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>CRUD completo (clientes/produtos/pedidos)</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>Busca, filtros e estados vazios</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>Tratamento de erros (loading/erro/retry)</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>Offline/caching (fallback e consist&ecirc;ncia)</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>Organiza&ccedil;&atilde;o em camadas (models/services/controllers)</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>Qualidade: testes b&aacute;sicos + README + apresenta&ccedil;&atilde;o final</li>
+              </ul>
+            </div>
+            <div class="diagram-card reveal" style="--delay: 0.1s;">
+              <h3>Mapa do sistema (alto n&iacute;vel)</h3>
+              <svg class="diagram" viewBox="0 0 720 220" role="img" aria-label="Diagrama do capstone Flutter para API, banco e deploy">
+                <defs>
+                  <marker id="arrow-capstone" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+                    <path d="M0,0 L6,3 L0,6" fill="currentColor"></path>
+                  </marker>
+                </defs>
+                <rect x="30" y="40" width="140" height="60" rx="12" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                <text x="100" y="75" text-anchor="middle">Flutter App</text>
+                <rect x="220" y="40" width="140" height="60" rx="12" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                <text x="290" y="75" text-anchor="middle">API Node</text>
+                <rect x="410" y="40" width="140" height="60" rx="12" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                <text x="480" y="75" text-anchor="middle">Banco SQL</text>
+                <rect x="220" y="130" width="140" height="60" rx="12" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                <text x="290" y="165" text-anchor="middle">Logs Mongo</text>
+                <rect x="410" y="130" width="140" height="60" rx="12" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                <text x="480" y="165" text-anchor="middle">Deploy Docker</text>
+                <path d="M170 70h45" stroke="currentColor" stroke-width="2" marker-end="url(#arrow-capstone)"></path>
+                <path d="M360 70h45" stroke="currentColor" stroke-width="2" marker-end="url(#arrow-capstone)"></path>
+                <path d="M290 100v25" stroke="currentColor" stroke-width="2" marker-end="url(#arrow-capstone)"></path>
+                <path d="M480 100v25" stroke="currentColor" stroke-width="2" marker-end="url(#arrow-capstone)"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="para-quem" class="section section-alt">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Perfil</p>
+            <h2>Para quem &eacute; esta forma&ccedil;&atilde;o</h2>
+          </div>
+          <div class="two-column">
+            <div class="card reveal">
+              <h3>Para quem &eacute;</h3>
+              <ul class="list">
+                <li>Iniciantes absolutos (do zero)</li>
+                <li>Quem j&aacute; tentou aprender e travou por falta de base e organiza&ccedil;&atilde;o</li>
+                <li>Quem quer sair com portf&oacute;lio e seguran&ccedil;a para criar sistemas reais</li>
+              </ul>
+            </div>
+            <div class="card reveal">
+              <h3>Pr&eacute;-requisitos</h3>
+              <ul class="list">
+                <li>Nenhum conhecimento pr&eacute;vio em programa&ccedil;&atilde;o</li>
+                <li>Computador e internet</li>
+                <li>Disponibilidade para pr&aacute;tica (recomendado: 3&ndash;5 horas por semana fora das aulas)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">FAQ</p>
+            <h2>Perguntas frequentes</h2>
+          </div>
+          <div class="accordion" data-accordion>
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1" id="faq-1-trigger">
+                  <span>Preciso saber matem&aacute;tica avan&ccedil;ada?</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="faq-1" role="region" aria-labelledby="faq-1-trigger" hidden>
+                <p>N&atilde;o. Voc&ecirc; precisa de racioc&iacute;nio l&oacute;gico e pr&aacute;tica. A matem&aacute;tica usada &eacute; b&aacute;sica e aplicada.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2" id="faq-2-trigger">
+                  <span>Se eu nunca programei, vou acompanhar?</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="faq-2" role="region" aria-labelledby="faq-2-trigger" hidden>
+                <p>Sim. A progress&atilde;o come&ccedil;a com l&oacute;gica e an&aacute;lise antes do c&oacute;digo, e cada aula tem exemplo guiado + desafio.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3" id="faq-3-trigger">
+                  <span>O que eu vou ter no meu portf&oacute;lio?</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="faq-3" role="region" aria-labelledby="faq-3-trigger" hidden>
+                <p>V&aacute;rios projetos: CLI, web, APIs, bancos, deploy e m&uacute;ltiplos apps Flutter + capstone final.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4" id="faq-4-trigger">
+                  <span>Como s&atilde;o os projetos?</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="faq-4" role="region" aria-labelledby="faq-4-trigger" hidden>
+                <p>Projetos guiados por aula e projetos maiores por fase, sempre aumentando a complexidade com valida&ccedil;&otilde;es e boas pr&aacute;ticas.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-5" id="faq-5-trigger">
+                  <span>O que significa &ldquo;forma&ccedil;&atilde;o&rdquo; aqui?</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="faq-5" role="region" aria-labelledby="faq-5-trigger" hidden>
+                <p>Significa aprender a construir software completo: an&aacute;lise, modelagem, c&oacute;digo, banco, API, deploy e app mobile.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-6" id="faq-6-trigger">
+                  <span>Como eu sei exatamente o que ser&aacute; ensinado?</span>
+                  <span class="accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="faq-6" role="region" aria-labelledby="faq-6-trigger" hidden>
+                <p>A p&aacute;gina mostra a grade por fases, os temas e os projetos. Nada fica &ldquo;vago&rdquo;.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="inscricao" class="section section-alt">
+        <div class="container">
+          <div class="cta-block reveal">
+            <div>
+              <h2>Pronto para ver a grade completa e os projetos em detalhe?</h2>
+              <p>Se voc&ecirc; quer aprender de verdade, com base s&oacute;lida e evolu&ccedil;&atilde;o constante, esta forma&ccedil;&atilde;o foi desenhada para te levar do zero at&eacute; um app Flutter profissional.</p>
+            </div>
+            <form id="lead-form" class="cta-form" action="#" method="post">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" placeholder="Seu nome completo" required>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="voce@email.com" required>
+              <button class="btn btn-primary" type="submit">Receber a grade completa (PDF/WhatsApp/Email)</button>
+              <p class="form-note">Ou, se preferir: <a href="#" class="link">Quero conversar</a> &bull; <a href="#" class="link">Quero entrar na lista</a></p>
+              <p id="form-status" class="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo">Forma&ccedil;&atilde;o Dev &mdash; Zero ao Flutter</div>
+          <p>Contato: contato@exemplo.com | WhatsApp: (00) 00000-0000</p>
+          <p>&copy; 2026 Forma&ccedil;&atilde;o Dev. Todos os direitos reservados.</p>
+        </div>
+        <nav aria-label="Links do rodape">
+          <ul class="footer-links">
+            <li><a href="#visao-geral">Vis&atilde;o Geral</a></li>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#grade">Grade</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#capstone">Capstone</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#inscricao">Inscri&ccedil;&atilde;o</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Voltar ao topo">
+      <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
