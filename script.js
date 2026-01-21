@@ -1,5 +1,13 @@
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const header = document.querySelector('.site-header');
+const setHeaderHeight = () => {
+  if (!header) {
+    return;
+  }
+  document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
+};
+
+setHeaderHeight();
 
 const navToggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-list');
@@ -117,6 +125,7 @@ accordions.forEach((accordion) => {
 });
 
 window.addEventListener('resize', () => {
+  setHeaderHeight();
   document.querySelectorAll('.accordion-panel.is-open').forEach((panel) => {
     panel.style.maxHeight = `${panel.scrollHeight}px`;
   });
@@ -129,6 +138,8 @@ window.addEventListener('resize', () => {
     }
   }
 });
+
+window.addEventListener('load', setHeaderHeight);
 
 const toTop = document.querySelector('.to-top');
 const onScroll = () => {
