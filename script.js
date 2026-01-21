@@ -3,12 +3,38 @@ const header = document.querySelector('.site-header');
 
 const navToggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-list');
+const navOverlay = document.querySelector('[data-nav-overlay]');
+const navBreakpoint = 1024;
+let closeNav = () => {};
 
 if (navToggle && navList) {
+  const setNavState = (isOpen) => {
+    const isMobileView = window.innerWidth <= navBreakpoint;
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navList.classList.toggle('is-open', isOpen);
+    navList.setAttribute('aria-hidden', String(isMobileView && !isOpen));
+    if (navOverlay) {
+      navOverlay.classList.toggle('is-open', isOpen);
+    }
+    document.body.classList.toggle('nav-open', isOpen);
+  };
+
+  closeNav = () => setNavState(false);
+  setNavState(navToggle.getAttribute('aria-expanded') === 'true');
+
   navToggle.addEventListener('click', () => {
     const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', String(!isOpen));
-    navList.classList.toggle('is-open', !isOpen);
+    setNavState(!isOpen);
+  });
+
+  if (navOverlay) {
+    navOverlay.addEventListener('click', closeNav);
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeNav();
+    }
   });
 }
 
@@ -34,8 +60,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     });
 
     if (navList && navToggle && navList.classList.contains('is-open')) {
-      navList.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
+      closeNav();
     }
   });
 });
@@ -95,6 +120,14 @@ window.addEventListener('resize', () => {
   document.querySelectorAll('.accordion-panel.is-open').forEach((panel) => {
     panel.style.maxHeight = `${panel.scrollHeight}px`;
   });
+  if (navList && navToggle) {
+    if (window.innerWidth > navBreakpoint) {
+      closeNav();
+    } else {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navList.setAttribute('aria-hidden', String(!isOpen));
+    }
+  }
 });
 
 const toTop = document.querySelector('.to-top');
