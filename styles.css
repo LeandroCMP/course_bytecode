@@ -142,6 +142,7 @@ button {
 
 .section {
   padding: 96px 0;
+  scroll-margin-top: calc(var(--header-height, 80px) + 16px);
 }
 
 .section-alt {
@@ -376,6 +377,10 @@ html[data-theme="dark"] .theme-toggle-icons .icon-sun {
   grid-column: span 5;
 }
 
+.hero-bottom {
+  grid-column: 1 / -1;
+}
+
 .badge-row {
   display: flex;
   flex-wrap: wrap;
@@ -504,7 +509,7 @@ html[data-theme="dark"] .theme-toggle-icons .icon-sun {
 }
 
 .outcome-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: stretch;
 }
 
@@ -675,6 +680,17 @@ html[data-theme="dark"] .theme-toggle-icons .icon-sun {
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
+.accordion-trigger span:first-child {
+  color: var(--text);
+  opacity: 1;
+}
+
+.accordion-trigger:focus-visible {
+  border-color: var(--accent);
+  background: var(--surface-alt);
+  box-shadow: var(--shadow-soft);
+}
+
 .accordion-trigger:hover {
   border-color: var(--accent);
   box-shadow: var(--shadow-soft);
@@ -689,6 +705,8 @@ html[data-theme="dark"] .theme-toggle-icons .icon-sun {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--text);
+  opacity: 0.85;
 }
 
 .accordion-icon::before,
@@ -818,8 +836,13 @@ html[data-theme="dark"] .theme-toggle-icons .icon-sun {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 18px;
+  align-items: stretch;
+}
+
+.project-grid .card {
+  height: 100%;
 }
 
 .project-tag {
@@ -954,6 +977,12 @@ html[data-theme="dark"] .theme-toggle-icons .icon-sun {
   gap: 12px;
   width: 100%;
   max-width: 520px;
+}
+
+.value-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
 }
 
 .value-card .list {
