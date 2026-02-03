@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guia Oficial — Formação Dev (Zero ao Flutter)</title>
+    <meta name="description" content="Guia oficial da Formação Dev: roteiro para alunos e professores com módulos, aulas e templates.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="guia.css">
+  </head>
+  <body class="guide-page">
+    <a class="skip-link" href="#main">Pular para o conteudo</a>
+
+    <header class="guide-header">
+      <div class="container guide-topbar">
+        <div class="guide-brand">
+          <button class="guide-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="guide-sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <a class="logo" href="index.html">Forma&ccedil;&atilde;o Dev &mdash; Zero ao Flutter</a>
+        </div>
+        <div class="guide-actions">
+          <a class="btn btn-ghost btn-small" href="index.html">Voltar para Home</a>
+          <div class="role-toggle" role="group" aria-label="Selecionar modo">
+            <button type="button" data-role="student">Aluno</button>
+            <button type="button" data-role="teacher">Professor</button>
+          </div>
+          <label class="search-field" for="search-input">
+            <span class="visually-hidden">Buscar</span>
+            <input class="search-input" id="search-input" type="search" placeholder="Buscar aulas, tópicos, termos">
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <div class="guide-scrim" data-guide-scrim aria-hidden="true"></div>
+
+    <div class="guide-layout">
+      <aside class="guide-sidebar" id="guide-sidebar" aria-label="Conteúdo">
+        <div class="sidebar-header">
+          <h2>Conteúdo</h2>
+          <button class="guide-close" type="button">Fechar</button>
+        </div>
+        <div class="sidebar-content" id="sidebar-content"></div>
+      </aside>
+
+      <main id="main" class="guide-main">
+        <section class="guide-hero">
+          <div class="guide-hero-card">
+            <div>
+              <p class="eyebrow">Guia oficial</p>
+              <h1 id="guide-title">Guia Oficial — Forma&ccedil;&atilde;o Dev</h1>
+              <p class="lead">O roteiro completo para estudantes e professores seguirem o mesmo caminho, aula por aula.</p>
+            </div>
+            <div class="guide-hero-meta" id="guide-meta"></div>
+            <div>
+              <h3>Estrutura padrão de 90 min</h3>
+              <div class="structure-list" id="guide-structure"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="guide-results" id="search-results" hidden></section>
+
+        <section class="guide-modules" id="modules-container"></section>
+
+        <section class="guide-templates" id="templates-container"></section>
+      </main>
+    </div>
+
+    <script src="guia-data.js"></script>
+    <script src="guia.js"></script>
+  </body>
+</html>
+
